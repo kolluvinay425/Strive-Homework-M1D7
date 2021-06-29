@@ -1,0 +1,115 @@
+<!-- Complete exercises from 1 to 6 with just plain HTML 
+
+EX1.: Add an h1 tag with the name of your shop
+
+EX2.: Add a TABLE with the top 5 products of your shop
+
+EX3.: Insert for each product an image, a title, a description and a price
+
+EX4.: Add links to existing Amazon products for each item in the table
+
+EX5.: Add a footer with the address and the name of your shop
+
+EX6.: Add a message board where the user can type a message in it (no real posting/saving features required!) 
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="ChangeBackgroundColor()">
+    <div col-md-6>
+        <div>
+            <h1 id="heading" onclick="changeText()" >Vinay Ecom</h1>
+            <!--<table>
+                
+                <tr><a target="_blank" href="https://www.amazon.it/2021-Apple-iPad-Wi-Fi-128GB/dp/B09334TZK6/ref=sr_1_5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ipad+pro&qid=1624971218&sr=8-5"><img title="Title Tag Goes Here" src="https://asset.mediaw.it/wcsstore/MMCatalogAssetStore/asset/images/15/63/156320.jpg" alt=""></a></tr>
+                <td>some title</td>
+                <td><a target="_blank" href="https://www.amazon.it/Notebook-Lenovo-Portatile-R3-3250u-Bluetooth/dp/B091J5XZ6L/ref=sr_1_47?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ideapad+3&qid=1624971293&sr=8-47"><img src="https://irmitek.com/wp-content/uploads/2021/01/Lenovo-IdeaPad-3-15ADA05-AMD-3020e.jpg" alt=""></a></td>
+                <td>some title</td>
+                <td><a target="_blank" href="https://www.amazon.it/Hamilton-Analogico-Automatico-Cinturino-H70455533/dp/B000J179X6/ref=sr_1_14?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=hamilton+khaki&qid=1624971537&sr=8-14"><img src="https://www.orologio.it/pictures/hamilton-khaki-field-h70455533-10160160.jpg" alt=""></a></td>
+                <td>some title</td>
+                <td><a target="_blank" href="https://www.amazon.it/Apple-Computer-Portatile-Generazione-LPDDR3-SDRAM/dp/B0882T64JW/ref=sr_1_22?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=37DD9MA5J85E2&dchild=1&keywords=macbook+pro+m1&qid=1624971588&sprefix=macboo%2Caps%2C209&sr=8-22"><img src="https://asset.mediaw.it/wcsstore/MMCatalogAssetStore/asset/images/14/62/146299.jpg" alt=""></a></td>
+                <td>some title</td>
+                <td><a target="_blank" href="https://www.amazon.it/Apple-MWP22TY-A-AirPods-Pro/dp/B07ZPNLGDP/ref=sr_1_5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=IKMBBPAP2X2W&dchild=1&keywords=apple+airpods+pro&qid=1624971715&sprefix=apple+ai%2Caps%2C204&sr=8-5"><img src="https://images-na.ssl-images-amazon.com/images/I/71zny7BTRlL._AC_SL1500_.jpg" alt=""></a></tr>
+                
+            </table>-->
+
+            <table border="1">
+                <tr>
+                <td> <a target="_blank" href="https://www.amazon.it/2021-Apple-iPad-Wi-Fi-128GB/dp/B09334TZK6/ref=sr_1_5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ipad+pro&qid=1624971218&sr=8-5"><img title="Title Tag Goes Here" src="https://asset.mediaw.it/wcsstore/MMCatalogAssetStore/asset/images/15/63/156320.jpg" alt=""></a></td>
+                </td>
+                
+                <td id="title">Title: Ipad pro 2020</td>
+                
+                <td><p> 
+                    <p>- Chip Apple M1</p>
+                    <p>- 256 GB</p>
+                    <p>- Display Multi-Touch retroilluminato LED da 11 pollici (diagonale) con tecnologia IPS</p>
+                    <p>- Fotocamera posteriore: 12,0 + 10,0 MP</p>
+                    <p>- Fotocamera anteriore: 12.0MP</p>
+                    <p>- Wi-Fi 802.11 a / b / g / n / ac / 6</p>
+                    <p>- Bluetooth 5.0</p>   
+                </p></td>
+                <td id="price">Price: 850,00 €</td>
+                </tr>
+                <tr>
+                <td><a target="_blank" href="https://www.amazon.it/Notebook-Lenovo-Portatile-R3-3250u-Bluetooth/dp/B091J5XZ6L/ref=sr_1_47?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ideapad+3&qid=1624971293&sr=8-47"><img src="https://irmitek.com/wp-content/uploads/2021/01/Lenovo-IdeaPad-3-15ADA05-AMD-3020e.jpg" alt=""></a></td>
+                <td id="title">Title: Ideapad s340</td>
+                <td>
+                    <p>- LENOVO IdeaPad 3 RYZEN 3 LEDs 15.6" Full HD color Silver- AMD RYZEN DUAL Core CPU R3-3250U - RADEON VEGA graphics card ( minimum frequency at 2.30 GHz, up to 3.5 ghz in Broost4 core)</p>
+                    <p>- SSD Nvme M2 512GB / RAM DDR4 8GB - Italian Qwerty keyboard with input numeric keypad / 2x USB 3.0 - 1x HDMI - 1x combo headphones microphone - 1x AC power supply - 1x sd card digital card reader - Qwerty keyboard with numeric keypad and island keys</p>
+                    <p>- ORIGINAL WINDOWS 10 HOME 64 BIT LICENSE WITH SERIAL LABEL (no DVD) is already present - Programs for daily use included for free OPEN SURCE (Office etc.) + online support application - RGDIGITAL offers warranty 2 years - N.B. New product with official LENOVO Warranty (we are Partner) - Open and closed by us for installation of Upgrade (Ram - Increased SSD) and programs (Win10)</p>
+                </td>
+                <td id="price"> Price: 678,00 €</td>
+                </tr>
+                <tr>
+                <td><a target="_blank" href="https://www.amazon.it/Hamilton-Analogico-Automatico-Cinturino-H70455533/dp/B000J179X6/ref=sr_1_14?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=hamilton+khaki&qid=1624971537&sr=8-14"><img src="https://www.orologio.it/pictures/hamilton-khaki-field-h70455533-10160160.jpg" alt=""></a></td>
+                <td id="title">Title: Hamilton Watch</td>
+                <td id="disc">  
+                    <p>The Hamilton military tradition can be found on the dial of this stunning Khaki Field King Auto timepiece with protections specially designed to ensure crown safety at all times. Long live the king.</p>
+                    <p>- Automatic charge</p>
+                    <p>- Day and date function </p>
+                    <p>- 80-hour extended power reserve </p>
+                    <p>- Movement with a perlate finish</p>
+                </td>
+                <td id="price"> Price: 490,00 €</td>
+                </tr>
+                <tr>
+                <td><a target="_blank" href="https://www.amazon.it/Apple-Computer-Portatile-Generazione-LPDDR3-SDRAM/dp/B0882T64JW/ref=sr_1_22?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=37DD9MA5J85E2&dchild=1&keywords=macbook+pro+m1&qid=1624971588&sprefix=macboo%2Caps%2C209&sr=8-22"><img src="https://asset.mediaw.it/wcsstore/MMCatalogAssetStore/asset/images/14/62/146299.jpg" alt=""></a></td>
+
+                <td id="title">Title: Macbook pro M1(2020)</td>
+                <td id="disc">
+                    <p>- Apple-designed M1 chip for a new level of CPU, GPU and machine learning performance</p>
+                    <p>- Up to 20 hours of battery life: more than any Mac, to do even more</p>
+                    <p>- 8‐core CPU with up to 2.8 times faster performance, to zip around workflows like never before</p>
+                    <p>- GPU 8‐core, for up to 5 x faster graphics in the most complex apps and games</p>
+                </td>
+                <td id="price">Price: 1.299,00 €</td>
+                </tr>
+                <tr>
+                <td><a target="_blank" href="https://www.amazon.it/Apple-MWP22TY-A-AirPods-Pro/dp/B07ZPNLGDP/ref=sr_1_5?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=IKMBBPAP2X2W&dchild=1&keywords=apple+airpods+pro&qid=1624971715&sprefix=apple+ai%2Caps%2C204&sr=8-5"><img src="https://images-na.ssl-images-amazon.com/images/I/71zny7BTRlL._AC_SL1500_.jpg" alt=""></a></td>
+                <td id="title">Title: Apple Airpods pro</td>
+                <td id="disc"><p>- Active noise cancellation to immerse yourself in sound</p>
+                    <p>- Adaptive equalization that automatically adjusts music based on the shape of your ear</p>
+                    <p>- Tapered pads in three sizes, made of soft silicone, for tailor-made comfort</p>
+                    <p>- Wireless charging case for over 24 hours of battery life</p>
+                </td>
+                <td>Price: 212,98 €</td>
+                </tr>    
+                </table>
+        </div>
+
+    </div>
+    <script src="shop.js"></script>
+</body>
+<footer>
+    <p onclick="ChangefooterAddress()" id="address">Via Varvariana,Roma</p>
+    <p>Vinay Ecom Ltd</p>
+</footer>
+</html>

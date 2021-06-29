@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(65, 62, 62);
+    margin: 0%;
+}
+h1{
+    text-align: center;
+    color: white;
+    
+}
+img{
+    height: 250px;
+    width: 300px;
+    text-align: left;
+    display: flex;
+    padding: 2px;
+}
+table{
+    color: white;
+}
+#disc{
+    width: 60%;
+}
+#price{
+    width: 15%;
+}
+#title{
+    width: 15%;
+}
+footer{
+    text-align: center;
+    background-color: tomato;
+}
+#address{
+  
+}
